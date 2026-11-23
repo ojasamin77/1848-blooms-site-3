@@ -6,6 +6,10 @@ from PIL import Image
 OUT = os.path.dirname(os.path.abspath(__file__))
 IMG = OUT + '/assets/img'
 SITE = '1848 Blooms & Designs'
+WED_FORM = 'https://docs.google.com/forms/d/e/1FAIpQLSezvMAhJgHH2pi5c92ohipBKujeKQc1tmaTfEVaxycdIquB6Q/viewform?usp=header'
+WED_ATTR = f'href="{html.escape(WED_FORM)}" target="_blank" rel="noopener"'
+EMAIL = 'ireneacquah@1848bloomsanddesigns.com'
+AREA = 'Delaware, Pennsylvania &amp; Beyond'
 _d = {}
 
 
@@ -34,9 +38,10 @@ NAV = [('index.html','Home'),('about.html','About'),('services.html','Services')
 MNAV = [('index.html','Home'),('about.html','About'),('designer.html','Meet the designer'),('services.html','Services'),('floral-bar.html','Floral Bar'),('portfolio.html','Portfolio'),('experiences.html','Experiences'),('reserve.html','Reserve your spot'),('contact.html','Contact')]
 LOGO = '<a class="brand" href="index.html" aria-label="1848 Blooms &amp; Designs, home"><img src="assets/logo.png" width="86" height="76" alt="1848 Blooms &amp; Designs"></a>'
 SOC = ('<span class="social">'
-       '<a href="#" aria-label="Pinterest"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.2 2C6.9 2 4.2 5.600 4.2 8.900c0 2 .8 3.800 2.400 4.400.3.100.5 0 .6-.3l.2-.9c.1-.3 0-.4-.2-.6-.5-.6-.8-1.300-.8-2.300 0-3 2.200-5.700 5.800-5.700 3.200 0 4.900 2 4.900 4.500 0 3.400-1.500 6.200-3.700 6.200-1.200 0-2.100-1-1.800-2.200.3-1.500 1-3.100 1-4.200 0-1-.5-1.800-1.600-1.800-1.300 0-2.300 1.300-2.300 3.100 0 1.100.4 1.900.4 1.900l-1.500 6.400c-.4 1.800-.1 4.200 0 4.400 0 .1.200.2.300.1.100-.2 1.800-2.200 2.300-4.200l.9-3.500c.5.900 1.800 1.600 3.200 1.600 4.200 0 7-3.800 7-8.900C20.200 5 17 2 12.200 2z"/></svg></a>'
-       '<a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3.500" y="3.500" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.200" cy="6.800" r=".6" fill="currentColor"/></svg></a>'
-       '<a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.500 21v-7.500h2.500l.4-3h-2.900V8.600c0-.9.3-1.500 1.500-1.500h1.500V4.400c-.3 0-1.200-.1-2.200-.1-2.200 0-3.700 1.300-3.700 3.800v2.400H7.800v3h2.800V21h2.900z"/></svg></a>'
+              '<a href="https://www.instagram.com/1848BloomsandDesigns" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3.500" y="3.500" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.200" cy="6.800" r=".6" fill="currentColor"/></svg></a>'
+       '<a href="https://www.facebook.com/1848BloomsandDesigns" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.500 21v-7.500h2.500l.4-3h-2.900V8.600c0-.9.3-1.500 1.500-1.500h1.500V4.400c-.3 0-1.200-.1-2.200-.1-2.200 0-3.700 1.300-3.700 3.800v2.400H7.800v3h2.800V21h2.900z"/></svg></a>'
+       '<a href="https://www.tiktok.com/@1848bloomsanddesigns" target="_blank" rel="noopener" aria-label="TikTok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.53.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></a>'
+       '<a href="https://www.linkedin.com/company/1848-blooms-and-designs/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45z"/></svg></a>'
        '</span>')
 
 
@@ -45,7 +50,7 @@ def header(cur):
     m = ''.join(f'<li><a href="{h}">{t}</a></li>' for h, t in MNAV)
     return f'''<a class="skip" href="#main">Skip to content</a>
 <header class="hd"><div class="hd__top">
-  <p class="flank hd__tag">Delaware + Philadelphia<br>floral designer</p>
+  <p class="flank hd__tag">{AREA}<br>Florist</p>
   {LOGO}
   <div class="hd__right">{SOC}<a class="contact-link" href="contact.html">Contact</a>
     <button class="menu-btn" type="button" aria-expanded="false" aria-controls="mnav"><i aria-hidden="true"></i><span>Menu</span></button></div>
@@ -53,7 +58,7 @@ def header(cur):
 <nav class="primary" aria-label="Main">{links}</nav>
 <nav class="mnav" id="mnav" aria-label="Menu">
   <ul>{m}</ul>
-  <div class="foot-line"><span>Serving Delaware and Philadelphia</span><span>Now booking 2026</span></div>
+  <div class="foot-line"><span>Serving {AREA}</span><span>Now booking 2026</span></div>
 </nav>'''
 
 
@@ -64,11 +69,10 @@ def footer():
   <div class="f-mid">
     <ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="designer.html">Meet the designer</a></li><li><a href="portfolio.html">Portfolio</a></li></ul>
     <ul><li><a href="services.html">Services</a></li><li><a href="floral-bar.html">Floral Bar</a></li><li><a href="experiences.html">Experiences</a></li><li><a href="reserve.html">Reserve your spot</a></li></ul>
-    <div class="f-btns"><a class="btn" href="reserve.html">Reserve your spot</a><a class="btn" href="#"><span class="ph">Follow @yourhandle</span></a>
-      <p class="f-note"><span class="ph">[hello@yourdomain.com]</span> &middot; <span class="ph">[Phone]</span></p></div>
+    <div class="f-btns"><a class="btn" href="reserve.html">Reserve your spot</a><a class="btn" {WED_ATTR}>Wedding inquiry</a></div>
   </div>
   <div class="f-thumbs">{thumbs}</div>
-  <div class="legal"><span>&copy; <span data-year>2026</span> 1848 Blooms &amp; Designs</span><span>Serving Delaware and Philadelphia &middot; Now booking 2026</span></div>
+  <div class="legal"><span>&copy; <span data-year>2026</span> 1848 Blooms &amp; Designs</span><span>Serving {AREA} &middot; Now booking 2026</span></div>
 </footer>'''
 
 
@@ -89,7 +93,7 @@ def page(fname, title, desc, body, noindex=False, og='home-banner'):
 <meta property="og:image" content="assets/img/{og}.jpg">
 <meta name="theme-color" content="#C5A193">
 <link rel="icon" type="image/png" href="assets/favicon.png">
-<link rel="stylesheet" href="assets/site.css?v=3">
+<link rel="stylesheet" href="assets/site.css?v=4">
 </head>
 <body>
 {header(fname)}
@@ -121,8 +125,9 @@ def phero(img, alt, title, left, right, lede, btn=None, plain=False):
 
 
 def closer(title='Let\u2019s design something unforgettable.', btn='Inquire now', href='contact.html', band='band-petal'):
+    ext = ' target="_blank" rel="noopener"' if href.startswith('http') else ''
     return f'''<section class="section {band}"><div class="wrap closer">
-  <h2 class="dsp">{title}</h2><div class="btn-row"><a class="btn btn--arrow" href="{href}">{btn}</a></div>
+  <h2 class="dsp">{title}</h2><div class="btn-row"><a class="btn btn--arrow" href="{html.escape(href)}"{ext}>{btn}</a></div>
 </div></section>'''
 
 
@@ -135,11 +140,12 @@ home = f'''
 <section class="hero">
   {im('home-banner', 'A long white table set with candles, glassware and a low arrangement of yellow, peach and white flowers beside a window', 'hero__img', eager=True)}
   <div class="hero__body">
-    <span class="eyebrow">Delaware and Philadelphia &middot; Now booking 2026</span>
-    <h1>Event floral design that leads with <span class="script">atmosphere.</span></h1>
+    <span class="eyebrow">{AREA} &middot; Now booking 2026</span>
+    <h1>Nature inspired garden style <span class="script">florals.</span></h1>
     <div class="btn-row">
       <a class="btn btn--arrow" href="services.html">Weddings + events</a>
-      <a class="btn btn--arrow" href="experiences.html">Experiences + Floral Bar</a>
+      <a class="btn btn--arrow" href="floral-bar.html">Floral Bar</a>
+      <a class="btn btn--arrow" href="experiences.html">Experiences</a>
     </div>
   </div>
   <span class="scroll-cue" aria-hidden="true">Scroll to begin</span>
@@ -163,9 +169,9 @@ home = f'''
   <div class="bio__img">{im('designer-smile', 'The designer smiling in a beige apron, holding a bouquet of white, yellow and orange flowers')}</div>
   <div class="bio__card">
     <span class="eyebrow">Meet the designer</span>
-    <h2 class="dsp"><span class="ph">[Designer name]</span></h2>
+    <h2 class="dsp">Irene Acquah</h2>
     <span class="rule"></span>
-    <p class="ph">[Two or three lines in her voice: how long she has designed, what her process feels like, what clients say about working with her.]</p>
+    <p>I am so glad you’re here. I’m Irene, lead designer of 1848 Blooms and Designs, where I pour my heart into creating beautiful nature inspired florals and arrangements.</p>
     <a class="arrow-link" href="designer.html">Learn more</a>
   </div>
 </section>
@@ -209,66 +215,50 @@ home = f'''
 </section>
 '''
 page('index.html', 'Florals for weddings, events and experiences',
-     'Floral design for weddings and meaningful gatherings in Delaware and Philadelphia, plus hands-on floral experiences and the Floral Bar.', home)
+     'Floral design for weddings and meaningful gatherings in Delaware, Pennsylvania and beyond, plus hands-on floral experiences and the Floral Bar.', home)
 
 # ================================================================== ABOUT
 about = f'''
-{phero('table-long-pastel', 'A long white table set with pastel centerpieces and wishbone chairs in a bright room', 'About 1848', 'Delaware<br>and Philadelphia', 'Floral<br>design studio',
+{phero('table-long-pastel', 'A long white table set with pastel centerpieces and wishbone chairs in a bright room', 'About 1848', 'Delaware, Pennsylvania<br>&amp; Beyond', 'Floral<br>design studio',
        '1848 Blooms &amp; Designs creates florals for weddings and events, and teaches hands-on floral experiences.')}
 
 <section class="section band-moss">
   <div class="wrap">
     {tbar('How we design', 'Our approach', 'In three parts')}
     <div class="principles" style="margin-top:clamp(2.5rem,5vw,4.5rem)">
-      <div><h3>Thoughtful design</h3><p>We begin with questions about the space, the season and how you want people to feel. The flowers follow from the answers, never from a template.</p></div>
-      <div><h3>Intentional details</h3><p>A ribbon color, a stem height, the way a bouquet sits in the hand. We decide each one on purpose, and we check them against each other.</p></div>
-      <div><h3>Unforgettable moments</h3><p>Good florals do their work quietly. They become the thing guests mention afterward, without ever getting in the way of the day.</p></div>
+      <div><h3>Thoughtful design</h3><p>Inspired by the beauty of a garden, we embrace the way flowers naturally grow and bloom. Layers of color, texture, movement and contrast come together to create arrangements that feel organic, romantic and effortlessly beautiful.</p></div>
+      <div><h3>Intentional details</h3><p>Every stem has its place. From varying heights and delicate blooms to unexpected textures and subtle color transitions, each detail is thoughtfully considered to create balance, depth and a natural sense of movement.</p></div>
+      <div><h3>Unforgettable moments</h3><p>Flowers have a way of transforming a space and how it makes us feel. We create floral designs that invite you to pause, take in the beauty and remember the moments that matter most.</p></div>
     </div>
   </div>
 </section>
 
 <section class="full-img">{im('table-window', 'A bright table by a window set with glassware and a centerpiece of yellow and orange flowers', extra='style="object-position:50% 70%"')}</section>
 
-<section class="section">
-  <div class="wrap split split--top split--57">
-    <div class="copy">
-      <h2 class="dsp" style="font-size:clamp(2rem,.9rem + 3.6vw,4.2rem)">How an event comes together</h2>
-      <p>Every project follows the same four steps, whether it is one bouquet or a full wedding. <span class="ph">[Confirm this process and add typical timelines.]</span></p>
-    </div>
-    <ol class="steps">
-      <li><div><h3>Inquire</h3><p>Tell us the date, the place and what you are imagining. We reply with availability.</p></div></li>
-      <li><div><h3>Consult</h3><p>We talk through the space, your palette and your priorities, and look at inspiration together.</p></div></li>
-      <li><div><h3>Design</h3><p>You receive a proposal with florals, quantities and pricing. We refine it with you until it feels right.</p></div></li>
-      <li><div><h3>Deliver and set up</h3><p>We prepare the flowers, bring them to your venue and install them, so you can focus on everything else.</p></div></li>
-    </ol>
-  </div>
-</section>
-
 <section class="panels">
   <div class="panel panel--img">{im('designer-smile', 'The designer smiling in a beige apron, holding a bouquet of white, yellow and orange flowers')}</div>
   <div class="panel panel--petal panel--center"><div>
-    <h2 class="dsp">Meet the designer behind 1848</h2>
-    <p>Every arrangement starts with one person’s eye. Read how she got started and what she cares about when she designs.</p>
+    <h2 class="dsp">Meet the lead designer behind 1848</h2>
     <div class="btn-row"><a class="btn" href="designer.html">Meet the designer</a></div>
   </div></div>
 </section>
 
 {closer('Tell us about your event.', 'Inquire now', band='band-paper2')}
 '''
-page('about.html', 'About', 'About 1848 Blooms & Designs, a floral design studio serving Delaware and Philadelphia for weddings, events and hands-on experiences.', about)
+page('about.html', 'About', 'About 1848 Blooms & Designs, a floral design studio serving Delaware, Pennsylvania and beyond for weddings, events and hands-on experiences.', about)
 
 # ================================================================== DESIGNER
 designer = f'''
-{phero('designer-couch', 'The designer relaxing on a cream sofa with a laptop, a bouquet of orange and yellow flowers beside her', 'Meet the designer', 'Designer<br>and owner', '1848 Blooms<br>&amp; Designs',
-       '<span class="ph">[Designer name]</span>, designer and owner of 1848 Blooms &amp; Designs.')}
+{phero('designer-couch', 'The designer relaxing on a cream sofa with a laptop, a bouquet of orange and yellow flowers beside her', 'Meet the designer', 'Lead<br>designer', '1848 Blooms<br>&amp; Designs',
+       'Irene Acquah, lead designer of 1848 Blooms &amp; Designs.')}
 
 <section class="panels">
   <div class="panel panel--img" style="min-height:640px">{im('designer-doorway', 'The designer standing in a sunlit doorway wearing a beige apron')}</div>
   <div class="panel panel--petal panel--center"><div>
     <h2 class="dsp">Why flowers</h2>
-    <p class="ph">[Her story, in her own voice: how she started, what first drew her to flowers, and what the name 1848 means. Two or three short paragraphs is plenty.]</p>
-    <p class="ph">I design with the season first. What is growing decides the palette, and the room decides the shape. [Edit or replace this line so it sounds like her.]</p>
-    <p class="ph">[What she loves most about the work: the first walk-through of a venue, the moment a bouquet comes together, the room when guests arrive.]</p>
+    <p>1848 Blooms &amp; Designs was founded on a love for timeless beauty, thoughtful details and meaningful experiences.</p>
+    <p>What began as a passion for floral design has grown into a studio dedicated to creating elevated, intentional moments, whether through weddings, curated events or interactive floral experiences.</p>
+    <p>Each design reflects a commitment to simplicity, elegance and the quiet beauty found in nature.</p>
     <div class="btn-row"><a class="btn" href="contact.html">Work with her</a><a class="btn btn--ghost" href="experiences.html">Join an experience</a></div>
   </div></div>
 </section>
@@ -286,40 +276,42 @@ designer = f'''
 
 {closer('Let’s make something together.', 'Inquire now')}
 '''
-page('designer.html', 'Meet the designer', 'Meet the designer and owner of 1848 Blooms & Designs.', designer)
+page('designer.html', 'Meet the designer', 'Meet Irene Acquah, lead designer of 1848 Blooms & Designs.', designer)
 
 # ================================================================== SERVICES
 services = f'''
 {phero('arch-pampas', 'A wooden triangle ceremony arch dressed with pampas grass and dried flowers on a deck', 'Services', 'Weddings', 'Events',
-       'Full-service florals, from a single bouquet to a ceremony and reception, designed around your venue and delivered by us.',
-       '<a class="btn" href="contact.html">Start an inquiry</a>')}
+       'Full-service florals, from a single bouquet to a ceremony and reception, designed around life’s most meaningful moments our clients cherish.',
+       f'<a class="btn" {WED_ATTR}>Start an inquiry</a>')}
 
 <section id="weddings" class="panels">
   <div class="panel panel--img" style="min-height:680px">{im('kiss-arch', 'A couple kissing under a wooden arch draped in white fabric and white flowers')}</div>
   <div class="panel panel--petal panel--center"><div>
     <h2 class="dsp">Weddings</h2>
-    <p>Your florals should feel like you and fit your venue. We design the whole picture so the ceremony, the reception and the people in them all feel connected.</p>
+    <p>Your florals should feel like you and fit the occasion. We understand and design the whole story so the ceremony, the reception and the people in them all feel connected.</p>
     <ul class="tick">
-      <li><strong>Bridal and bridesmaid bouquets</strong><span>Plus boutonnieres, corsages and flowers for family.</span></li>
-      <li><strong>Ceremony florals</strong><span>Arches, aisle pieces and welcome signage.</span></li>
-      <li><strong>Reception florals</strong><span>Centerpieces, head table and tablescapes.</span></li>
-      <li><strong>Installations</strong><span>Hanging and statement pieces for the moments guests will photograph.</span></li>
+      <li><strong>Personal flowers</strong><span>Bouquets, boutonnieres, corsages and flowers for your wedding party.</span></li>
+      <li><strong>Ceremony flowers</strong><span>Floral arches, aisle arrangements and statement pieces for your ceremony.</span></li>
+      <li><strong>Reception flowers</strong><span>Centerpieces, installations and floral details that bring your reception space together.</span></li>
     </ul>
-    <p class="small"><span class="ph">Wedding florals start at [$____].</span></p>
-    <div class="btn-row"><a class="btn" href="contact.html">Inquire about your wedding</a></div>
+    <p><em>Custom wedding florals tailored to your celebration.</em></p>
+    <p class="small">Wedding florals start at $2,500.00</p>
+    <div class="btn-row"><a class="btn" {WED_ATTR}>Inquire about your wedding</a></div>
   </div></div>
 </section>
 
 <section id="events" class="panels">
   <div class="panel panel--deep panel--center"><div>
     <h2 class="dsp">Events</h2>
-    <p>Dinners, showers, birthdays and corporate gatherings. We style the table and the room so the occasion feels considered from the first glance.</p>
+    <p>Some gatherings call for more than a beautiful table. They call for flowers that make people stop and look.</p>
+    <p>From intimate dinners and bridal showers to birthdays and corporate events, we bring the beauty of a garden into the spaces where people come together.</p>
     <ul class="tick">
-      <li><strong>Tablescapes and centerpieces</strong><span>Florals planned alongside your linens, candles and place settings.</span></li>
-      <li><strong>Hanging and ladder installations</strong><span>Overhead pieces that turn a plain room into a place.</span></li>
-      <li><strong>Arrangements and bouquets</strong><span>For hosts, guests of honor and gifting.</span></li>
+      <li><strong>Flowers that make the table feel like part of the occasion, not just a place to sit.</strong></li>
+      <li><strong>A little height. An unexpected color. A mix of blooms and textures that makes the whole room come alive.</strong></li>
+      <li><strong>From a single arrangement to a room full of flowers, every celebration deserves its own look.</strong></li>
     </ul>
-    <p class="small" style="color:rgba(246,238,232,.85)"><span class="ph">Event florals start at [$____].</span></p>
+    <p><em>Every event is different. Let’s talk about yours.</em></p>
+    <p class="small" style="color:rgba(246,238,232,.85)">Event florals start at $750.00</p>
     <div class="btn-row"><a class="btn btn--cream" href="contact.html">Inquire about your event</a></div>
   </div></div>
   <div class="panel panel--img" style="min-height:680px">{im('pastel-table-a', 'A pastel table with a tall arrangement of pink and white flowers, a taper candle and pink napkins')}</div>
@@ -338,18 +330,19 @@ services = f'''
   <div class="wrap split split--top split--57">
     <h2 class="dsp" style="font-size:clamp(2rem,.9rem + 3.4vw,4rem)">Questions we hear a lot</h2>
     <div class="faq">
-      <details><summary>How far ahead should I book?</summary><div><p class="ph">[Answer: for example, how many months ahead for weddings and how many weeks for events.]</p></div></details>
-      <details><summary>Do you deliver and set up?</summary><div><p class="ph">[Answer: delivery and setup details, and any fees.]</p></div></details>
-      <details><summary>Do you travel outside Delaware and Philadelphia?</summary><div><p class="ph">[Answer: travel radius and travel fees.]</p></div></details>
-      <details><summary>How do deposits and payments work?</summary><div><p class="ph">[Answer: deposit amount, payment schedule and accepted payment methods.]</p></div></details>
-      <details><summary>Can I choose my own colors and flowers?</summary><div><p class="ph">[Answer: how much of the palette is the client’s call, and how seasonality affects it.]</p></div></details>
+      <details><summary>How far in advance should I book?</summary><div><p>For weddings, we recommend reaching out 6–12 months ahead, especially for popular dates. For smaller events, 4–8 weeks is a good starting point. Have something coming up sooner? Reach out and we’ll see what we can do.</p></div></details>
+      <details><summary>How much do wedding and event flowers cost?</summary><div><p>Every event is different, so pricing depends on the flowers, arrangements and overall design. Share a few details about your celebration and we’ll put together a proposal based on what you need.</p></div></details>
+      <details><summary>Can I choose my flowers and colors?</summary><div><p>Absolutely. We love hearing what you have in mind. We’ll work with your preferred colors and flowers, while recommending seasonal blooms and combinations that work beautifully together. Specific varieties depend on availability.</p></div></details>
+      <details><summary>Do you deliver and set up?</summary><div><p>Delivery and on-site setup can be included depending on your event and floral needs. We’ll confirm the arrangements, location and any associated fees in your proposal.</p></div></details>
+      <details><summary>Where do you provide floral services?</summary><div><p>We serve Delaware, Pennsylvania and beyond, including Philadelphia, New Hope, Lumberville, Doylestown and Kennett Square. Planning something farther away? We’d love to hear about it.</p></div></details>
+      <details><summary>What happens after I submit an inquiry?</summary><div><p>We’ll review your event details, learn more about what you’re looking for and discuss the next steps. Once the scope and pricing are agreed upon, we’ll explain the booking and payment process.</p></div></details>
     </div>
   </div>
 </section>
 
-{closer('Ready to talk florals?', 'Inquire now', band='band-petal')}
+{closer('Ready to talk florals?', 'Inquire now', WED_FORM, 'band-petal')}
 '''
-page('services.html', 'Services', 'Wedding and event floral design in Delaware and Philadelphia: bouquets, ceremony florals, reception florals and installations.', services)
+page('services.html', 'Services', 'Wedding and event floral design in Delaware, Pennsylvania and beyond: bouquets, ceremony florals, reception florals and installations.', services)
 
 # ================================================================== FLORAL BAR
 bar = f'''
@@ -386,8 +379,7 @@ bar = f'''
       <li><strong>Birthdays and baby showers</strong></li>
       <li><strong>Corporate and team events</strong></li>
     </ul>
-    <p><span class="ph">[What is included: stems per guest, containers, a designer on site, setup and cleanup, and the guest counts you can serve.]</span></p>
-    <p class="small"><span class="ph">Floral Bar packages start at [$____].</span></p>
+    <p class="small">Floral Bar packages start at $850.00</p>
     <div class="btn-row"><a class="btn" href="contact.html">Inquire about a Floral Bar</a></div>
   </div></div>
   <div class="panel panel--img" style="min-height:640px">{im('ladder-daisies', 'Daisies and cosmos in a woven basket at the foot of a wooden ladder')}</div>
@@ -517,12 +509,28 @@ page('portfolio.html', 'Portfolio', 'Weddings, events, bouquets and floral detai
 
 # ================================================================== CONTACT
 contact = f'''
-{phero('', '', 'Contact', 'Inquiries', 'Now booking<br>2026',
-       'Share the basics and we will reply with availability and next steps. <span class="ph">[Typical response time.]</span>', plain=True)}
+<section class="phero phero--plain">
+  <div class="phero__mid"><span class="eyebrow">Inquiries &middot; Now booking 2026</span><div class="tbar"><h1 class="dsp">Get in touch</h1></div></div>
+  <div class="phero__foot">
+    <p>We are looking forward to hearing from you!</p>
+    <p>For weddings, please visit our <a class="link" href="services.html#weddings">wedding page here</a> and complete our <a class="link" {WED_ATTR}>wedding inquiry form here</a>.<br>For general inquiries, send us a <a class="link" href="#general">message here</a>.</p>
+  </div>
+</section>
 
-<section class="section">
-  <div class="wrap form-grid">
-    <form class="form" data-form="inquiry" novalidate>
+<section class="section" id="general">
+  <div class="wrap form-grid form-grid--flip">
+    <aside class="aside">
+      {im('designer-stool', 'Irene Acquah, lead designer of 1848 Blooms & Designs, laughing on a stool and holding a bouquet', '', extra='style="object-position:50% 30%"')}
+      <dl>
+        <div><dt>Email</dt><dd><a class="link" href="mailto:{EMAIL}">{EMAIL}</a></dd></div>
+        <div><dt>Service area</dt><dd>{AREA}</dd></div>
+        <div><dt>Follow along</dt><dd><a class="link" href="https://www.instagram.com/1848BloomsandDesigns" target="_blank" rel="noopener">Instagram</a>, <a class="link" href="https://www.facebook.com/1848BloomsandDesigns" target="_blank" rel="noopener">Facebook</a>, <a class="link" href="https://www.tiktok.com/@1848bloomsanddesigns" target="_blank" rel="noopener">TikTok</a>, <a class="link" href="https://www.linkedin.com/company/1848-blooms-and-designs/" target="_blank" rel="noopener">LinkedIn</a></dd></div>
+      </dl>
+    </aside>
+    <div class="gi">
+      <h2 class="dsp">General inquiry</h2>
+      <p>Whether you’re planning a wedding, a special event, a floral experience or simply have a question, we’re here to help bring your vision to life. Please type your message below or send me a direct email at <a class="link" href="mailto:{EMAIL}">{EMAIL}</a>.</p>
+      <form class="form" data-form="inquiry" novalidate>
       <div class="field"><label for="name">Your name</label><input id="name" name="name" autocomplete="name" required><p class="err">Enter your name.</p></div>
       <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" required><p class="err">Enter a valid email address.</p></div>
       <div class="field"><label for="phone">Phone <span class="hint">(optional)</span></label><input id="phone" name="phone" type="tel" autocomplete="tel"></div>
@@ -536,20 +544,12 @@ contact = f'''
       <div class="field"><label for="venue">Venue or city</label><input id="venue" name="venue" autocomplete="off"></div>
       <div class="field"><label for="guests">Guest count <span class="hint">(roughly)</span></label><input id="guests" name="guests" type="number" min="1" inputmode="numeric"></div>
       <div class="field"><label for="found">How did you find us?</label><input id="found" name="found_us"></div>
-      <div class="field full"><label for="msg">What are you imagining?</label><textarea id="msg" name="message" placeholder="Colors, flowers you love, the feeling you want, anything that helps." required></textarea><p class="err">Tell us a little about your plans.</p></div>
+      <div class="field full"><label for="msg">Your message</label><textarea id="msg" name="message" placeholder="Colors, flowers you love, the feeling you want, or simply your question." required></textarea><p class="err">Tell us a little about your plans.</p></div>
       <div class="hp" aria-hidden="true"><label>Leave this empty<input name="website" tabindex="-1" autocomplete="off"></label></div>
       <div class="notice" role="status"></div>
-      <button class="btn" type="submit">Send inquiry</button>
-    </form>
-    <aside class="aside">
-      {im('pastel-table-c', 'A pastel table set with a tall arrangement of pink and white flowers, pink napkins and gold flatware')}
-      <dl>
-        <div><dt>Email</dt><dd><span class="ph">[hello@yourdomain.com]</span></dd></div>
-        <div><dt>Phone</dt><dd><span class="ph">[Phone number]</span></dd></div>
-        <div><dt>Service area</dt><dd>Delaware and Philadelphia</dd></div>
-        <div><dt>Follow along</dt><dd><a class="link" href="#">Instagram</a>, <a class="link" href="#">Pinterest</a>, <a class="link" href="#">Facebook</a></dd></div>
-      </dl>
-    </aside>
+      <button class="btn" type="submit">Send</button>
+      </form>
+    </div>
   </div>
 </section>
 '''
@@ -609,7 +609,7 @@ thanks = f'''
     <div>
       <ul class="tick">
         <li><strong>While you wait</strong><span>Browse recent work in the <a class="link" href="portfolio.html">portfolio</a>, or save ideas to share when we talk.</span></li>
-        <li><strong>Need to add something?</strong><span>Reply to our email, or write to us at <span class="ph">[hello@yourdomain.com]</span>.</span></li>
+        <li><strong>Need to add something?</strong><span>Reply to our email, or write to us at <a class="link" href="mailto:{EMAIL}">{EMAIL}</a>.</span></li>
       </ul>
       <div class="btn-row" style="margin-top:2rem"><a class="btn" href="index.html">Back to home</a><a class="btn btn--ghost" href="portfolio.html">See the portfolio</a></div>
     </div>

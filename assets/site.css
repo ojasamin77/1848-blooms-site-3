@@ -250,8 +250,9 @@ h1+p,h2+p,h3+p{margin-top:1rem}
 .site-footer{background:var(--paper);border-top:1px solid var(--line)}
 .f-top{display:flex;justify-content:space-between;align-items:center;gap:1.5rem;padding:2.2rem var(--pad);border-bottom:1px solid var(--line)}
 .f-top .brand img{height:56px}
-.f-mid{display:grid;grid-template-columns:1fr 1fr 1.6fr;gap:2rem;padding:2.6rem var(--pad);align-items:start}
-.f-mid ul li+li{margin-top:.7rem}
+.f-mid{display:grid;grid-template-columns:max-content max-content minmax(0,1fr);gap:2rem clamp(2rem,4vw,3.5rem);padding:2.6rem var(--pad);align-items:start}
+.f-mid .f-btns{justify-self:end;width:min(100%,380px)}
+.f-mid ul li+li{margin-top:.55rem}
 .f-mid a{font:400 .62rem var(--sans);letter-spacing:.24em;text-transform:uppercase;text-decoration:none}
 .f-mid a:hover{color:var(--rose-d)}
 .f-mid .f-note{font-size:1.05rem;color:var(--ink-2);max-width:30ch}
@@ -506,3 +507,20 @@ h1{font-size:clamp(1.9rem,1rem + 2.8vw,3.5rem)}
 .mnav li a{font-weight:400}
 .contact-link{font-family:"Cormorant",Georgia,serif}
 @media (max-width:560px){body{font-size:1rem}}
+
+/* ---------- revision 1 ---------- */
+.phero--plain h1{color:var(--body-c)}
+.panel--deep .tick strong{color:var(--cream)}
+.social a[aria-label="TikTok"] svg,.social a[aria-label="LinkedIn"] svg{width:14px;height:14px;margin-top:1px}
+.form-grid--flip{grid-template-columns:4fr 7fr}
+.gi>h2{font-size:clamp(1.8rem,1rem + 2.4vw,3rem);margin-bottom:1rem}
+.gi>p{margin-bottom:2rem;max-width:60ch}
+.phero--plain .phero__foot p+p{margin-top:-.6rem}
+.faq details div p{margin:0}
+@media (max-width:1060px){
+  .f-mid .f-btns{justify-self:stretch;width:auto}
+}
+@media (max-width:900px){
+  .form-grid--flip{grid-template-columns:1fr}
+  .form-grid--flip .gi{order:-1}
+}

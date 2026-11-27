@@ -169,6 +169,12 @@
       var radio = $('input[name="experience"][value="' + pre + '"]', form);
       if (radio) radio.checked = true;
     }
+    /* contact.html?type=wedding (or any option text) preselects "What are you planning?" */
+    var preType = (qs.get('type') || '').toLowerCase();
+    var kind = $('select[name="event_type"]', form);
+    if (preType && kind) {
+      $$('option', kind).forEach(function (o) { if (o.value && o.value.toLowerCase().indexOf(preType) === 0) kind.value = o.value; });
+    }
 
     var validate = function () {
       var ok = true, first = null;

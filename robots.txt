@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://1848bloomsanddesigns.com/sitemap.xml
